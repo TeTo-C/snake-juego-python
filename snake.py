@@ -2,6 +2,7 @@ import turtle
 import time
 import random
 
+# Dificultades
 ve = 0
 vel = 0
 numeros_para_velocidad_random = list(range(8,100000))
