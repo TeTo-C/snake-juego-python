@@ -3,66 +3,114 @@ import time
 import random
 
 # Dificultades
-ve = 0
+
 vel = 0
+ve = 0
 numeros_para_velocidad_random = list(range(8,100000))
 velocidad = input("Seleccione el modo de juego\n1 = muy fácil\n2 = fácil\n3 = normal\n4 = difícil\n5 = extremo\n6 = imposible\n7 = modo practica(pudes configurar la velocidad del juego y de la culebrita)\nEscriba su indice de la dificultad ")
 
 if int(velocidad) in numeros_para_velocidad_random:
     velocidad = random.randint(1,8)
+    colorcabeza = random.randint(127,255)
+    colorfondo = random.randint(85,170)
+    colorcomida = random.randint(80,180)
 elif int(velocidad) == 1:
-    vel += 1
-    ve += 0.085
+    vel == 1
+    ve == 0.085
+    colorfondo = ("#263238")
+    colorcabeza = ("white")
+    colorcomida = ("red")
 elif int(velocidad) == 2:
-    vel += 3
-    ve += 0.0835
+    vel == 3
+    ve == 0.0835
+    colorfondo = ("#263238")
+    colorcabeza = ("white")
+    colorcomida = ("red")
 elif int(velocidad) == 3:
-    vel += 0
-    ve += 0.07
+    vel == 0
+    ve == 0.07
+    colorfondo = ("#263238")
+    colorcabeza = ("white")
+    colorcomida = ("red")
 elif int(velocidad) == 4:
-    vel += 10
-    ve += 0.0445
+    vel == 10
+    ve == 0.0445
+    colorfondo = ("#263238")
+    colorcabeza = ("white")
+    colorcomida = ("red")
 elif int(velocidad) == 5:
-    vel += 0
-    ve += 0.039
+    vel == 0
+    ve == 0.039
+    colorfondo = ("#263238")
+    colorcabeza = ("white")
+    colorcomida = ("red")
 elif int (velocidad) == 6:
-    vel += 0
-    ve += 0.029
+    vel == 0
+    ve == 0.032
+    colorfondo = ("#263238")
+    colorcabeza = ("white")
+    colorcomida = ("red")
 elif int(velocidad) == 7:
     velo = input("Seleccione la velocidad de la culebrita\n1 = lento\n2 = normal\n3 = rapido\n4 = muy rapida\nEscriba la velocidad ")
     veo = input("Seleccione la velocidad del juego\n1 = lento\n2 = normal\n3 = rapido\nEscriba la velocidad ")
     if int(veo) and int(velo) in numeros_para_velocidad_random:
         velo = random.randint(1,4)
         veo = random.randint(1,3)
+        colorfondo = ("#263238")
     elif int(velo) == 1 and int(veo) == 1:
-        vel += 1
-        ve += 0.085
+        vel == 1
+        ve == 0.085
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 1 and int(veo) == 2:
-        vel += 3
-        ve += 0.0835
+        vel == 3
+        ve == 0.0835
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 1 and int(veo) == 3:
-        vel += 6
-        ve += 0.07
+        vel == 6
+        ve == 0.07
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 2 and int(veo) == 2:
-        vel += 6
-        ve += 0.07
+        vel == 6
+        ve == 0.07
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 2 and int(veo) == 3:
-        vel += 10
-        ve += 0.0445
+        vel == 10
+        ve == 0.0445
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 3 and int(veo) == 3:
-       vel += 0
-       ve += 0.039
+       vel == 0
+       ve == 0.039
+       colorfondo = ("#263238")
+       colorcabeza = ("white")
+       colorcomida = ("red")
     elif int(velo) == 4 and int(veo) == 1:
-        vel += 0
-        ve += 0.039
+        vel == 0
+        ve == 0.039
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 4 and int(veo) == 2:
-        vel += 10
-        ve += 0.0445
+        vel == 10
+        ve == 0.0445
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
     elif int(velo) == 4 and int(veo) == 3:
-        vel += 0
-        ve += 0.039
-
-
+        vel == 0
+        ve == 0.039
+        colorfondo = ("#263238")
+        colorcabeza = ("white")
+        colorcomida = ("red")
 
 posponer = float(ve)
 
@@ -72,7 +120,7 @@ high_score = 0
 
 wn = turtle.Screen()
 wn.title('Snake')
-wn.bgcolor("#263238")
+wn.bgcolor(0,colorfondo,colorfondo)
 wn.setup(width = 750, height = 750)
 wn.tracer(0)
 # def muyfácil():
@@ -107,7 +155,7 @@ wn.tracer(0)
 cabeza = turtle.Turtle()
 cabeza.speed(int(vel))
 cabeza.shape("square")
-cabeza.color("white")
+cabeza.color(colorcabeza,colorcabeza,colorcabeza)
 cabeza.penup()
 cabeza.goto(0,0)
 cabeza.direction = "stop"
@@ -116,7 +164,7 @@ cabeza.direction = "stop"
 comida = turtle.Turtle()
 comida.speed(0.5)
 comida.shape("circle")
-comida.color("red")
+comida.color(colorcomida,0,colorcomida)
 comida.penup()
 comida.goto(0,100)
 
@@ -200,13 +248,13 @@ wn.onkeypress(abajo, "Down")
 wn.onkeypress(izquierda, "Left")
 wn.onkeypress(derecha, "Right")
 
-false_or_true1 = False
-false_or_true2 = True
+false_or_true1 = True
+false_or_true2 = False
 
-if velocidad == 1 or velocidad == 2 or  velocidad == 3 or velocidad == 4 or velocidad == 5 or velocidad == 6:
+if int(velocidad) == 1 or int(velocidad) == 2 or  int(velocidad) == 3 or int(velocidad) == 4 or int(velocidad) == 5 or int(velocidad) == 6:
     false_or_true1 = True
     false_or_true2 = False
-elif velocidad == 7:
+elif int(velocidad) == 7:
     false_or_true1 = False
     false_or_true2 = True
 
