@@ -149,7 +149,7 @@ if y_or_n == "N":
     texto.write("Score: 0       High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
 elif y_or_n == "Y":
     texto.clear()
-    texto.write("Score: 0       Deads: 0        High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
+    texto.write("Score: 0   Deads: 0  High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
 
 # game over
 textoq = turtle.Turtle()
@@ -215,21 +215,19 @@ while false_or_true1:
             segmento.goto(10000,10000)
 
         segmentos.clear()
+        texto.clear()
         score = 0
         deads += 1
         if y_or_n == "N":
-            texto.clear()
             texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
         elif y_or_n == "Y":
-            texto.clear()
-            texto.write("Score: {}       Deads: {}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
-        score = 0
+            texto.write("Score: {}   Deads: {}  High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
 
         textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
         textoq.clear()
         time.sleep(1)
-        score = 0
 
+# Colisiones comida
     if cabeza.distance(comida) < 15:
         x = random.randint(-355,355)
         y = random.randint(-355,315)
@@ -242,19 +240,17 @@ while false_or_true1:
         nuevo_segmento.penup()
         segmentos.append(nuevo_segmento)
 
-        score += 1
 
         if score > high_score:
             high_score = score
 
         texto.clear()
 
+        score += 1
         if y_or_n == "N":
-            texto.clear()
             texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
         elif y_or_n == "Y":
-            texto.clear()
-            texto.write("Score: {}       Deads: {}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            texto.write("Score: {}   Deads: {}  High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
 
 
     # mover el cuerpo de la serpiente
@@ -282,12 +278,11 @@ while false_or_true1:
 
             texto.clear()
             score = 0
+            deads += 1
             if y_or_n == "N":
-                texto.clear()
                 texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
             elif y_or_n == "Y":
-                texto.clear()
-                texto.write("Score: 0       Deads: 0        High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
+                texto.write("Score: 0   Deads: 0  High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
 
             textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
             textoq.clear()
@@ -302,18 +297,18 @@ while false_or_true2:
         cabeza.goto(0,0)
         cabeza.direction = "stop"
 
+        texto.clear()
         deads += 1
         if y_or_n == "Y":
-            texto.clear()
-            texto.write("Score: {}      Deads:{}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            texto.write("Score: {}   Deads: {}  High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
         elif y_or_n == "N":
-            texto.clear()
-            texto.write("Score: {}      Deads:{}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            texto.write("Score: {}   Deads: {}  High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
 
         textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
         textoq.clear()
         time.sleep(1)
 
+# Colisiones comida
     if cabeza.distance(comida) < 15:
         x = random.randint(-355,300)
         y = random.randint(-355,315)
@@ -333,7 +328,7 @@ while false_or_true2:
 
         if y_or_n == "Y":
             texto.clear()
-            texto.write("Score: {}      Deads: {}       High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            texto.write("Score: {}   Deads: {}  High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
         elif y_or_n == "N":
             texto.clear()
             texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
@@ -357,12 +352,11 @@ while false_or_true2:
             cabeza.goto(0,0)
             cabeza.direction = "stop"
 
+            texto.clear()
             deads += 1
             if y_or_n == "Y":
-                texto.clear()
-                texto.write("Score: {}      Deads: {}       High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+                texto.write("Score: {}   Deads: {}  High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
             elif y_or_n == "N":
-                texto.clear()
                 texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
             textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
             textoq.clear()
