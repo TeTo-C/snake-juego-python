@@ -6,156 +6,97 @@ import random
 
 vel = 0
 ve = 0
-numeros_para_velocidad_random = list(range(8,100000))
-velocidad = input("Seleccione el modo de juego\n1 = muy fácil\n2 = fácil\n3 = normal\n4 = difícil\n5 = extremo\n6 = imposible\n7 = modo practica(pudes configurar la velocidad del juego y de la culebrita)\nEscriba su indice de la dificultad ")
+numeros_para_velocidad_random = list(range(8,100001))
+velocidad = input("\nSeleccione el modo de juego\n1 = muy fácil\n2 = fácil\n3 = normal\n4 = difícil\n5 = extremo\n6 = imposible\n7 = modo practica(pudes configurar la velocidad del juego y de la culebrita)\n\nEscriba su indice de la dificultad ")
 
 if int(velocidad) in numeros_para_velocidad_random:
     velocidad = random.randint(1,8)
-    colorcabeza = random.randint(127,255)
-    colorfondo = random.randint(85,170)
-    colorcomida = random.randint(80,180)
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 1:
-    vel == 1
-    ve == 0.085
-    colorfondo = ("#263238")
-    colorcabeza = ("white")
-    colorcomida = ("red")
+    vel = 1
+    ve = 0.0635
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 2:
-    vel == 3
-    ve == 0.0835
-    colorfondo = ("#263238")
-    colorcabeza = ("white")
-    colorcomida = ("red")
+    vel = 3
+    ve = 0.0615
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 3:
-    vel == 0
-    ve == 0.07
-    colorfondo = ("#263238")
-    colorcabeza = ("white")
-    colorcomida = ("red")
+    vel = 0
+    ve = 0.0545
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 4:
-    vel == 10
-    ve == 0.0445
-    colorfondo = ("#263238")
-    colorcabeza = ("white")
-    colorcomida = ("red")
+    vel = 10
+    ve = 0.0425
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 5:
-    vel == 0
-    ve == 0.039
-    colorfondo = ("#263238")
-    colorcabeza = ("white")
-    colorcomida = ("red")
+    vel = 0
+    ve = 0.0365
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int (velocidad) == 6:
-    vel == 0
-    ve == 0.032
-    colorfondo = ("#263238")
-    colorcabeza = ("white")
-    colorcomida = ("red")
+    vel = 0
+    ve = 0.0225
+    y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 7:
-    velo = input("Seleccione la velocidad de la culebrita\n1 = lento\n2 = normal\n3 = rapido\n4 = muy rapida\nEscriba la velocidad ")
-    veo = input("Seleccione la velocidad del juego\n1 = lento\n2 = normal\n3 = rapido\nEscriba la velocidad ")
+    velo = input("\nSeleccione la velocidad de la culebrita\n1 = lento\n2 = normal\n3 = rapido\n4 = muy rapida\nEscriba la velocidad ")
+    veo = input("\nSeleccione la velocidad del juego\n1 = lento\n2 = normal\n3 = rapido\nEscriba la velocidad ")
     if int(veo) and int(velo) in numeros_para_velocidad_random:
         velo = random.randint(1,4)
         veo = random.randint(1,3)
-        colorfondo = ("#263238")
     elif int(velo) == 1 and int(veo) == 1:
-        vel == 1
-        ve == 0.085
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 1
+        ve = 0.0635
+        y_or_n = input("\n¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 1 and int(veo) == 2:
-        vel == 3
-        ve == 0.0835
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 3
+        ve = 0.0615
+        y_or_n = input("\n¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 1 and int(veo) == 3:
-        vel == 6
-        ve == 0.07
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 0
+        ve = 0.545
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 2 and int(veo) == 2:
-        vel == 6
-        ve == 0.07
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 0
+        ve = 0.0545
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 2 and int(veo) == 3:
-        vel == 10
-        ve == 0.0445
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 10
+        ve = 0.0425
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 3 and int(veo) == 3:
-       vel == 0
-       ve == 0.039
-       colorfondo = ("#263238")
-       colorcabeza = ("white")
-       colorcomida = ("red")
+        vel = 0
+        ve = 0.0365
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 4 and int(veo) == 1:
-        vel == 0
-        ve == 0.039
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 0
+        ve = 0.0545
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 4 and int(veo) == 2:
-        vel == 10
-        ve == 0.0445
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 0
+        ve = 0.0365
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
     elif int(velo) == 4 and int(veo) == 3:
-        vel == 0
-        ve == 0.039
-        colorfondo = ("#263238")
-        colorcabeza = ("white")
-        colorcomida = ("red")
+        vel = 0
+        ve = 0.0225
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 
 posponer = float(ve)
 
 # Marcadores
 score = 0
 high_score = 0
+deads = 0
 
 wn = turtle.Screen()
 wn.title('Snake')
-wn.bgcolor(0,colorfondo,colorfondo)
+wn.bgcolor("#263238")
 wn.setup(width = 750, height = 750)
 wn.tracer(0)
-# def muyfácil():
-#     vel = 1
-#     ve = 0.085
-# def fácil():
-#     vel = 3
-#     ve = 0.0835
-# def normal():
-#     vel = 0
-#     ve = 0.07
-# def difícil():
-#     vel = 10
-#     ve = 0.0445
-# def extremo():
-#     vel = 0
-#     ve = 0.039
-# def imposible():
-#     vel = 0
-#     ve = 0.029
-
-# # 
-# wn.listen()
-# wn.onkeypress(muyfácil, "Numpad1")
-# wn.onkeypress(fácil, "Numpad2")
-# wn.onkeypress(normal, "Numpad3")
-# wn.onkeypress(difícil, "Numpad4")
-# wn.onkeypress(extremo, "Numpad5")
-# wn.onkeypress(imposible, "Numpad6")
 
 # Cabeza serpiente
 cabeza = turtle.Turtle()
 cabeza.speed(int(vel))
 cabeza.shape("square")
-cabeza.color(colorcabeza,colorcabeza,colorcabeza)
+cabeza.color("white")
 cabeza.penup()
 cabeza.goto(0,0)
 cabeza.direction = "stop"
@@ -164,7 +105,7 @@ cabeza.direction = "stop"
 comida = turtle.Turtle()
 comida.speed(0.5)
 comida.shape("circle")
-comida.color(colorcomida,0,colorcomida)
+comida.color("red")
 comida.penup()
 comida.goto(0,100)
 
@@ -204,7 +145,11 @@ texto.color("white")
 texto.penup()
 texto.hideturtle()
 texto.goto(0,335)
-texto.write("Score: 0       High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
+if y_or_n == "N":
+    texto.write("Score: 0       High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
+elif y_or_n == "Y":
+    texto.clear()
+    texto.write("Score: 0       Deads: 0        High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
 
 # game over
 textoq = turtle.Turtle()
@@ -271,8 +216,13 @@ while false_or_true1:
 
         segmentos.clear()
         score = 0
-        texto.clear()
-        texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        deads += 1
+        if y_or_n == "N":
+            texto.clear()
+            texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        elif y_or_n == "Y":
+            texto.clear()
+            texto.write("Score: {}       Deads: {}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
         score = 0
 
         textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
@@ -281,8 +231,8 @@ while false_or_true1:
         score = 0
 
     if cabeza.distance(comida) < 15:
-        x = random.randint(-355,300)
-        y = random.randint(-355,335)
+        x = random.randint(-355,355)
+        y = random.randint(-355,315)
         comida.goto(x,y)
 
         nuevo_segmento = turtle.Turtle()
@@ -298,7 +248,14 @@ while false_or_true1:
             high_score = score
 
         texto.clear()
-        texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+
+        if y_or_n == "N":
+            texto.clear()
+            texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        elif y_or_n == "Y":
+            texto.clear()
+            texto.write("Score: {}       Deads: {}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+
 
     # mover el cuerpo de la serpiente
     totalSeg = len(segmentos)
@@ -325,7 +282,13 @@ while false_or_true1:
 
             texto.clear()
             score = 0
-            texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            if y_or_n == "N":
+                texto.clear()
+                texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            elif y_or_n == "Y":
+                texto.clear()
+                texto.write("Score: 0       Deads: 0        High Score: 0", align = "center", font = ("Fixedsys", 24,"normal"))
+
             textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
             textoq.clear()
             time.sleep(2)
@@ -339,8 +302,13 @@ while false_or_true2:
         cabeza.goto(0,0)
         cabeza.direction = "stop"
 
-        texto.clear()
-        texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        deads += 1
+        if y_or_n == "Y":
+            texto.clear()
+            texto.write("Score: {}      Deads:{}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        elif y_or_n == "N":
+            texto.clear()
+            texto.write("Score: {}      Deads:{}        High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
 
         textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
         textoq.clear()
@@ -348,7 +316,7 @@ while false_or_true2:
 
     if cabeza.distance(comida) < 15:
         x = random.randint(-355,300)
-        y = random.randint(-355,355)
+        y = random.randint(-355,315)
         comida.goto(x,y)
 
         nuevo_segmento = turtle.Turtle()
@@ -363,8 +331,12 @@ while false_or_true2:
         if score > high_score:
             high_score = score
 
-        texto.clear()
-        texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        if y_or_n == "Y":
+            texto.clear()
+            texto.write("Score: {}      Deads: {}       High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+        elif y_or_n == "N":
+            texto.clear()
+            texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
 
     # mover el cuerpo de la serpiente
     totalSeg = len(segmentos)
@@ -385,8 +357,13 @@ while false_or_true2:
             cabeza.goto(0,0)
             cabeza.direction = "stop"
 
-            texto.clear()
-            texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            deads += 1
+            if y_or_n == "Y":
+                texto.clear()
+                texto.write("Score: {}      Deads: {}       High Score: {}".format(score, deads, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
+            elif y_or_n == "N":
+                texto.clear()
+                texto.write("Score: {}       High Score: {}".format(score, high_score), align = "center", font = ("Fixedsys", 24,"normal"))
             textoq.write("GAME OVER", align = "center", font = ("Fixedsys", 48,"normal"))
             textoq.clear()
             time.sleep(2)
