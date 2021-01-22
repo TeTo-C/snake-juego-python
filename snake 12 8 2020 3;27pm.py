@@ -4,9 +4,6 @@ import random
 
 # Dificultades
 
-colorcabeza2 = (1,1,1)
-colorfondo2 = (1,1,1)
-colorcomida2 = (1,1,1)
 vel = 0
 ve = 0
 numeros_para_velocidad_random = list(range(8,100000))
@@ -40,8 +37,8 @@ elif int (velocidad) == 6:
     ve = 0.0225
     y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 7:
-    velo = input("\nSeleccione la velocidad de la culebrita\n1 = lento\n2 = normal\n3 = rapido\n4 = muy rapida\nEscriba la velocidad ")
-    veo = input("\nSeleccione la velocidad del juego\n1 = lento\n2 = normal\n3 = rapido\nEscriba la velocidad ")
+    velo = input("\nSeleccione la velocidad de la culebrita\n1 = lento\n2 = normal\n3 = rapido\n4 = muy rapida\nEscriba la velocidad: ")
+    veo = input("\nSeleccione la velocidad del juego\n1 = lento\n2 = normal\n3 = rapido\nEscriba la velocidad: ")
     if int(veo) and int(velo) in numeros_para_velocidad_random:
         velo = random.randint(1,4)
         veo = random.randint(1,3)
