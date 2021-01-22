@@ -8,10 +8,10 @@ vel = 0
 ve = 0
 numeros_para_velocidad_random = list(range(8,100000))
 velocidad = input("\nSeleccione el modo de juego\n1 = muy fácil\n2 = fácil\n3 = normal\n4 = difícil\n5 = extremo\n6 = imposible\n7 = modo practica(pudes configurar la velocidad del juego y de la culebrita)\n\nEscriba su indice de la dificultad ")
-while velocidad = numeros_para_velocidad_random:
-    if int(velocidad) in numeros_para_velocidad_random:
-            velocidad = random.randint(1,8)
-            y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
+velocidad = numeros_para_velocidad_random:
+if int(velocidad) in numeros_para_velocidad_random:
+        velocidad = random.randint(1,8)
+        y_or_n = input("¿Quiere contar las muertes?\n\nY = Si\nN = No\n\n")
 elif int(velocidad) == 1:
     vel = 1
     ve = 0.0635
